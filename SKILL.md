@@ -172,7 +172,47 @@ python scripts/viral_radar.py score-benchmark examples/benchmark-score-input.jso
 
 ## Step 6：发布前检查
 
-读取 `references/prepublish-check.md`。逐项判断并直接修改。严重的事实、合规、抄袭或用户身份不匹配问题必须标记为“暂不建议发布”。
+先读取 `references/prepublish-check.md` 作为总入口，再按以下顺序执行：
+
+```text
+用户选择平台
+↓
+通用短视频规则检查
+↓
+平台专项规则检查
+↓
+输出综合得分、严重问题、一般问题和修改稿
+```
+
+固定先读：
+
+- `references/platforms/common-short-video-rules.md`
+- `references/prepublish/common-checklist.md`
+
+再按平台补读：
+
+- 小红书：`references/platforms/xiaohongshu-rules.md` + `references/prepublish/xiaohongshu-checklist.md`
+- 抖音：`references/platforms/douyin-rules.md` + `references/prepublish/douyin-checklist.md`
+- 视频号：`references/platforms/wechat-channels-rules.md` + `references/prepublish/wechat-channels-checklist.md`
+
+每条内容检查后必须输出：
+
+- 平台；
+- 综合得分；
+- 发布结论；
+- 严重问题；
+- 一般问题；
+- 建议修改；
+- 新开头、完整优化脚本、封面短标题、发布配文、置顶评论。
+
+发布结论只能使用四档：
+
+1. **可以直接发布**
+2. **小改后发布**
+3. **建议重写**
+4. **不建议发布**
+
+严重的事实、合规、抄袭、信任崩塌或用户身份不匹配问题，必须降为“建议重写”或“不建议发布”。
 
 ## 构建完整上下文（可选）
 

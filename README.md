@@ -29,7 +29,7 @@ redbook（可选）读取小红书公开数据
               ↓
 创作者个人档案匹配
               ↓
-选题、脚本、拍摄方案、发布检查
+选题、脚本、拍摄方案、平台化发布检查
 ```
 
 ## 快速开始
@@ -99,7 +99,28 @@ viral-radar redbook creator "<profile-url>" --out workspaces/creator
 viral-radar redbook note "<fresh-note-url>" --out workspaces/note
 ```
 
-### 7. 构建完整分析上下文
+### 7. 发布前检查
+
+发布前检查默认分三层：
+
+```text
+通用短视频规则
+→ 平台专项规则
+→ 综合评分与修改稿
+```
+
+当前内置平台：
+
+- 小红书；
+- 抖音；
+- 视频号。
+
+规则文件位于：
+
+- `references/platforms/`
+- `references/prepublish/`
+
+### 8. 构建完整分析上下文
 
 ```bash
 viral-radar build-context \
@@ -124,7 +145,7 @@ viral-radar build-context \
 
 ```text
 SKILL.md                         Agent 工作流
-references/                     六大功能的分析规则
+references/                     六大功能的分析规则与平台发布规则
 profiles/                       创作者档案模板
 schemas/                        数据结构
 src/universe_viral_radar/       Python 适配器与 CLI

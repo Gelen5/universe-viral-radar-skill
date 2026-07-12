@@ -1,18 +1,33 @@
-# 发布前检查
+# 发布前检查总入口
 
-逐项给出：通过 / 需修改 / 信息不足，并直接给修改稿。
+默认流程：
 
-1. **人群明确**：前三秒能否看出讲给谁。
-2. **钩子具体**：是否包含冲突、结果、损失或好奇缺口，而不是泛泛提问。
-3. **承诺兑现**：正文是否真的回答了开头。
-4. **信息密度**：是否存在重复、铺垫过长或一句能说完却说三句。
-5. **证据可信**：数据、案例和截图是否可验证，有无误导。
-6. **原创程度**：是否只是替换了对标稿名词。
-7. **用户适配**：是否符合用户身份、能力、经历、平台和表达习惯。
-8. **画面可拍**：每段是否有明确画面，制作成本是否可接受。
-9. **CTA 单一**：结尾是否只推动一个主要动作。
-10. **商业自然**：产品是否解决正文中的同一问题，而非突然硬广。
-11. **合规风险**：绝对化承诺、收益承诺、医疗金融等高风险表达。
-12. **发布资产完整**：标题、封面、配文、置顶评论和回复是否齐全。
+```text
+用户选择平台
+↓
+调用通用短视频检查
+↓
+调用对应平台专项检查
+↓
+输出评分、问题和修改稿
+```
 
-总分不是目的。任何严重证据、合规或原创问题都应阻止发布。
+先读：
+
+- `references/platforms/common-short-video-rules.md`
+- `references/prepublish/common-checklist.md`
+
+再按平台读取：
+
+- 小红书：`references/platforms/xiaohongshu-rules.md` + `references/prepublish/xiaohongshu-checklist.md`
+- 抖音：`references/platforms/douyin-rules.md` + `references/prepublish/douyin-checklist.md`
+- 视频号：`references/platforms/wechat-channels-rules.md` + `references/prepublish/wechat-channels-checklist.md`
+
+统一输出四档结论：
+
+1. **可以直接发布**
+2. **小改后发布**
+3. **建议重写**
+4. **不建议发布**
+
+总分不是目的。任何严重证据、合规、原创或平台失配问题，都应阻止发布或降为“建议重写 / 不建议发布”。
