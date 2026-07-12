@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Video Evidence",
+  "type": "object",
+  "required": ["schema_version", "kind", "source", "frames", "transcript_segments"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "kind": {"const": "video_evidence"},
+    "source": {"type": "string"},
+    "frames": {"type": "array", "items": {"type": "string"}},
+    "transcript_segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "text"],
+        "properties": {
+          "timestamp": {"type": "string"},
+          "text": {"type": "string"}
+        }
+      }
+    }
+  }
+}

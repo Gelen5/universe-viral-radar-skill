@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Viral Radar Analysis Output",
+  "type": "object",
+  "required": ["evidence_quality", "diagnosis", "findings", "adaptation"],
+  "properties": {
+    "evidence_quality": {"type": "string", "enum": ["high", "medium", "low"]},
+    "diagnosis": {"type": "string"},
+    "findings": {"type": "array", "items": {"type": "object"}},
+    "adaptation": {"type": "object"},
+    "assumptions": {"type": "array", "items": {"type": "string"}}
+  }
+}

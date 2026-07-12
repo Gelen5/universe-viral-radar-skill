@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "kind": "manual_video_evidence",
+  "source": "user-uploaded-video-or-screenshots",
+  "platform": "视频号",
+  "duration_seconds": 30,
+  "transcript_segments": [
+    {"timestamp": "00:00", "text": "在这里粘贴前三秒口播"}
+  ],
+  "frames": [
+    {"timestamp": "00:00", "description": "首帧画面和屏幕文字"}
+  ],
+  "metrics": {
+    "views": null,
+    "likes": null,
+    "comments": null,
+    "shares": null
+  },
+  "top_comments": []
+}

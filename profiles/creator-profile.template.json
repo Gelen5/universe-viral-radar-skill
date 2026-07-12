@@ -1,0 +1,55 @@
+{
+  "profile_version": "1.0",
+  "identity": {
+    "name": "",
+    "role": "",
+    "background": [],
+    "credible_experience": [],
+    "proof_assets": []
+  },
+  "target_audience": {
+    "primary": "",
+    "current_state": [],
+    "pain_points": [],
+    "desired_state": [],
+    "buying_triggers": []
+  },
+  "content_pillars": [
+    {
+      "name": "",
+      "purpose": "traffic|trust|conversion",
+      "topics": []
+    }
+  ],
+  "voice": {
+    "language": "zh-CN",
+    "traits": ["直接", "具体", "真实"],
+    "preferred_phrases": [],
+    "avoid_phrases": ["空洞口号", "过度承诺", "照搬对标文案"],
+    "sample_posts": []
+  },
+  "products": [
+    {
+      "name": "",
+      "format": "",
+      "price": "",
+      "promise": "",
+      "target_customer": "",
+      "proof": [],
+      "conversion_entry": ""
+    }
+  ],
+  "constraints": {
+    "platforms": ["视频号", "抖音", "小红书"],
+    "can_show_face": true,
+    "can_voiceover": true,
+    "available_minutes_per_day": 60,
+    "preferred_video_lengths": [15, 30, 60],
+    "forbidden_topics": []
+  },
+  "goals": {
+    "primary": "conversion",
+    "next_30_days": "",
+    "call_to_action": ""
+  }
+}

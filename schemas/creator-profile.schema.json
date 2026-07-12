@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creator Profile",
+  "type": "object",
+  "required": ["identity", "target_audience", "content_pillars", "voice", "products", "constraints", "goals"],
+  "properties": {
+    "identity": {"type": "object"},
+    "target_audience": {"type": "object"},
+    "content_pillars": {"type": "array"},
+    "voice": {"type": "object"},
+    "products": {"type": "array"},
+    "constraints": {"type": "object"},
+    "goals": {"type": "object"}
+  }
+}
