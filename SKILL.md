@@ -195,6 +195,13 @@ python scripts/viral_radar.py score-benchmark examples/benchmark-score-input.jso
 - 抖音：`references/platforms/douyin-rules.md` + `references/prepublish/douyin-checklist.md`
 - 视频号：`references/platforms/wechat-channels-rules.md` + `references/prepublish/wechat-channels-checklist.md`
 
+需要本地快速检查时，可直接运行：
+
+```bash
+python scripts/viral_radar.py prepublish draft.json --platform xiaohongshu
+python scripts/viral_radar.py prepublish draft.md --platform douyin --format markdown --out workspaces/douyin-review.md
+```
+
 每条内容检查后必须输出：
 
 - 平台；

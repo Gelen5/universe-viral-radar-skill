@@ -9,7 +9,18 @@ MODE_REFERENCES = {
     "video": ["evidence-rules.md", "video-breakdown.md", "viral-structure.md"],
     "creator": ["evidence-rules.md", "creator-analysis.md", "monetization-path.md"],
     "script": ["evidence-rules.md", "personalized-script.md", "prepublish-check.md"],
-    "prepublish": ["evidence-rules.md", "prepublish-check.md"],
+    "prepublish": [
+        "evidence-rules.md",
+        "prepublish-check.md",
+        "platforms/common-short-video-rules.md",
+        "platforms/xiaohongshu-rules.md",
+        "platforms/douyin-rules.md",
+        "platforms/wechat-channels-rules.md",
+        "prepublish/common-checklist.md",
+        "prepublish/xiaohongshu-checklist.md",
+        "prepublish/douyin-checklist.md",
+        "prepublish/wechat-channels-checklist.md",
+    ],
     "full": [
         "evidence-rules.md",
         "video-breakdown.md",
@@ -18,6 +29,14 @@ MODE_REFERENCES = {
         "viral-structure.md",
         "personalized-script.md",
         "prepublish-check.md",
+        "platforms/common-short-video-rules.md",
+        "platforms/xiaohongshu-rules.md",
+        "platforms/douyin-rules.md",
+        "platforms/wechat-channels-rules.md",
+        "prepublish/common-checklist.md",
+        "prepublish/xiaohongshu-checklist.md",
+        "prepublish/douyin-checklist.md",
+        "prepublish/wechat-channels-checklist.md",
     ],
 }
 
@@ -32,7 +51,7 @@ def build_context(mode: str, evidence_files: Iterable[str], profile_file: str | 
     root = repo_root()
     chunks = [f"# Universe Viral Radar Context\n\nMode: `{mode}`\n"]
     for name in MODE_REFERENCES[mode]:
-        chunks.append(f"\n---\n\n# Reference: {name}\n\n{_read(root / 'references' / name)}")
+        chunks.append(f"\n---\n\n# Reference: {name}\n\n{_read(root / 'references' / Path(name))}")
     if profile_file:
         profile = Path(profile_file).expanduser().resolve()
         chunks.append(f"\n---\n\n# Creator Profile: {profile.name}\n\n```json\n{_read(profile)}\n```")

@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .context_builder import build_context
 from .doctor import format_doctor, run_doctor
+from .prepublish import run_prepublish_review
 from .profile import init_profile, validate_profile
 from .redbook_adapter import analyze_creator, analyze_note, extract_template, search_notes
 from .scoring import score_benchmark
@@ -66,6 +67,12 @@ def _parser() -> argparse.ArgumentParser:
     score = sub.add_parser("score-benchmark", help="Calculate benchmark-account fit score")
     score.add_argument("input", help="JSON file with 0-10 dimension values")
     score.add_argument("--out")
+
+    prepublish = sub.add_parser("prepublish", help="Run platform-specific pre-publish review")
+    prepublish.add_argument("input", help="Path to a .json/.md/.txt draft")
+    prepublish.add_argument("--platform", choices=["xiaohongshu", "douyin", "wechat-channels"])
+    prepublish.add_argument("--out")
+    prepublish.add_argument("--format", choices=["json", "markdown"], default="json")
     return parser
 
 
@@ -104,6 +111,9 @@ def main(argv: list[str] | None = None) -> int:
                 print(write_json(args.out, result))
             else:
                 print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0
+        if args.command == "prepublish":
+            print(run_prepublish_review(args.input, args.platform, args.out, args.format))
             return 0
     except (RuntimeError, ValueError, FileNotFoundError, FileExistsError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

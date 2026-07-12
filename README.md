@@ -120,6 +120,26 @@ viral-radar redbook note "<fresh-note-url>" --out workspaces/note
 - `references/platforms/`
 - `references/prepublish/`
 
+CLI 用法示例：
+
+```bash
+viral-radar prepublish draft.json --platform xiaohongshu
+viral-radar prepublish draft.md --platform douyin --format markdown --out workspaces/douyin-review.md
+```
+
+`draft.json` 推荐包含：
+
+```json
+{
+  "platform": "wechat-channels",
+  "title": "标题",
+  "cover_title": "封面短标题",
+  "caption": "发布配文",
+  "hashtags": ["标签1", "标签2"],
+  "script": "待检查脚本正文"
+}
+```
+
 ### 8. 构建完整分析上下文
 
 ```bash
